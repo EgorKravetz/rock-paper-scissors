@@ -4,13 +4,19 @@ const computerPlay = function() {
 }
 
 const playRound = function(playerSelection, computerSelection) {
-if (playerSelection == 'Rock' && computerSelection == 'Scissors') return `You win, ${playerSelection} beat ${computerSelection}`;
-if (playerSelection == 'Paper' && computerSelection == 'Rock') return `You win, ${playerSelection} beat ${computerSelection}`;
-if (playerSelection == 'Scissors' && computerSelection == 'Paper') return `You win, ${playerSelection} beat ${computerSelection}`;
-
-}
+  if (playerSelection == null) {
+    return `You canceled game`;}
+  else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
+    return `You win, ${playerSelection} beat ${computerSelection}`;}
+  else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
+    return `You win, ${playerSelection} beat ${computerSelection}`;}
+  else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
+    return `You win, ${playerSelection} beat ${computerSelection}`;}
+  else if (playerSelection == computerSelection) {
+    return `Draw ps ${playerSelection} and cs ${computerSelection}`;}
+    return `You lose, ${computerSelection} beat ${playerSelection}`;
+   }
 
 const playerSelection = prompt('Enter word');
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
-alert(playerSelection);
+alert(playRound(playerSelection, computerSelection));
