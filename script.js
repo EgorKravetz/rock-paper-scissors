@@ -32,3 +32,6 @@ alert(playRound(playerSelection, computerSelection));
 const container = document.createElement('div');
 container.textContent = 'Div';
 document.body.appendChild('container');
+document.container.textContent('DIV')
+
+document.body.container.style('color: red');
